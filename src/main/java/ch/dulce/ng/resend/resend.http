@@ -1,4 +1,4 @@
-POST http://localhost:8080/resend/d3125631-ae53-4549-a3d8-96e365acdbb3
+POST http://localhost:8080/resend/345b66f5-c748-4c4d-b347-b58fac7cdd56
 Content-Type: application/json
 
 {

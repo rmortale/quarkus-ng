@@ -49,7 +49,7 @@ public class Router extends RouteBuilder {
           .log(LoggingLevel.DEBUG, "Routing for ${variable.savedMinioObject.serviceId} loaded from cache.")
         .end()
 
-        // check if routing record exists for serviceId in db
+        // check if routing record was found in db
         .choice()
           .when(simple("${body.isEmpty()}"))
             .to(NO_ROUTING_FOUND_EP)

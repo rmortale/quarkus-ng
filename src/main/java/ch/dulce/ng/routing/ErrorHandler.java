@@ -4,6 +4,7 @@ package ch.dulce.ng.routing;
 import ch.dulce.ng.dto.MinioEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import org.apache.camel.ExchangePropertyKey;
+import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
 
 import static ch.dulce.ng.routing.Router.*;
@@ -22,6 +23,8 @@ public class ErrorHandler extends RouteBuilder {
     // errors are processed first by this route and sent to kafka topic
     from(ERROR_HANDLER_EP)
         .routeId("error-handler-route")
+        .log(LoggingLevel.ERROR,"Transfer failed for file ${variable.savedMinioObject.filename}. ${exception.message}")
+        //.to("log:error?showAll=true&multiline=true")
         .unmarshal().json(MinioEvent.class)
         .process(ex -> {
           MinioEvent ev = ex.getMessage().getBody(MinioEvent.class);
