@@ -1,0 +1,8 @@
+{
+  "serviceid": "service1",
+  "host": "oravm05",
+  "port": 2222,
+  "username": "foo",
+  "password": "pass",
+  "targetDir": "upload"
+}

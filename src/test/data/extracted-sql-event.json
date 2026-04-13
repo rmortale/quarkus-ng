@@ -1,0 +1,24 @@
+{
+  "Key": "vvz-source-bucket/service1/68b4bab8-6e8a-486a-8113-447b9f9c9fd8/pom.xml",
+  "Records": [
+    {
+      "eventTime": "2026-03-30T20:50:42.271Z",
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "bucket": {
+          "name": "vvz-source-bucket"
+        },
+        "object": {
+          "key": "service1%2F68b4bab8-6e8a-486a-8113-447b9f9c9fd8%2Fpom.xml",
+          "size": 4575,
+          "contentType": "text/xml",
+          "userMetadata": {
+            "X-Amz-Meta-Serviceid": "service1",
+            "X-Amz-Meta-Tracingid": "68b4bab8-6e8a-486a-8113-447b9f9c9fd8",
+            "content-type": "text/xml"
+          }
+        }
+      }
+    }
+  ]
+}

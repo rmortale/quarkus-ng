@@ -1,0 +1,55 @@
+{
+    "EventName": "s3:ObjectCreated:Put",
+    "Key": "ng-file-store/flowid-25/bin/mvn.cmd",
+    "Records": [
+        {
+            "eventVersion": "2.0",
+            "eventSource": "minio:s3",
+            "awsRegion": "",
+            "eventTime": "2026-03-25T17:01:12.564Z",
+            "eventName": "s3:ObjectCreated:Put",
+            "userIdentity": {
+                "principalId": "minioadmin"
+            },
+            "requestParameters": {
+                "principalId": "minioadmin",
+                "region": "",
+                "sourceIPAddress": "77.56.48.24"
+            },
+            "responseElements": {
+                "x-amz-id-2": "dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8",
+                "x-amz-request-id": "18A024372B9774FC",
+                "x-minio-deployment-id": "08a2df0e-7c41-4952-b4e6-65e8709b6d05",
+                "x-minio-origin-endpoint": "http://172.19.0.8:9000"
+            },
+            "s3": {
+                "s3SchemaVersion": "1.0",
+                "configurationId": "Config",
+                "bucket": {
+                    "name": "ng-file-store",
+                    "ownerIdentity": {
+                        "principalId": "minioadmin"
+                    },
+                    "arn": "arn:aws:s3:::ng-file-store"
+                },
+                "object": {
+                    "key": "flowid-25%2Fbin%2Fmvn.cmd",
+                    "size": 6324,
+                    "eTag": "34086cf3ea58c2bb30afd8390c032731",
+                    "contentType": "application/octet-stream",
+                    "userMetadata": {
+                        "X-Amz-Meta-Serviceid": "service1",
+                        "X-Amz-Meta-Tracingid": "b9e19aef-cb54-4781-a5c6-be35f32cc546",
+                        "content-type": "application/octet-stream"
+                    },
+                    "sequencer": "18A024372B9B1816"
+                }
+            },
+            "source": {
+                "host": "77.56.48.24",
+                "port": "",
+                "userAgent": "MinIO (linux; arm64) minio-go/v7.0.90 MinIO Console/(dev)"
+            }
+        }
+    ]
+}

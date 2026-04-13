@@ -1,0 +1,7 @@
+POST http://localhost:8080/resend/d3125631-ae53-4549-a3d8-96e365acdbb3
+Content-Type: application/json
+
+{
+  "id": 999,
+  "value": "content"
+}

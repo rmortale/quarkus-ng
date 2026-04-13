@@ -1,0 +1,24 @@
+{
+  "serviceid": "service1",
+
+  "sftpRecords": [
+    {
+      "id": 1,
+      "host": "oravm05",
+      "port": 2222,
+      "username": "foo",
+      "password": "pass",
+      "targetDir": "upload"
+    },
+    {
+      "id": 2,
+      "host": "oravm05",
+      "port": 2222,
+      "username": "foo",
+      "password": "pass",
+      "targetDir": "upload2"
+    }
+  ],
+  "s3Records": []
+
+}
