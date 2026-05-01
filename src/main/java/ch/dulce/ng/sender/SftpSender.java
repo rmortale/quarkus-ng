@@ -20,7 +20,10 @@ public class SftpSender extends RouteBuilder {
         .maximumRedeliveries(0)
         .useOriginalBody());
 
-    from("kafka:ng-sftp-events?groupId=sftpConsumerGroup&consumersCount={{sftp.sender.consumersCount}}&maxPollIntervalMs={{sftp.sender.maxPollIntervalMs}}&maxPollRecords=1")
+    from("""
+        kafka:ng-sftp-events?groupId=sftpConsumerGroup&consumersCount={{sftp.sender.consumersCount}}
+        &maxPollIntervalMs={{sftp.sender.maxPollIntervalMs}}
+        &maxPollRecords=1""")
         .streamCache(false) //OOME occure with large files if set to true
         .routeId("sftp-sender-route")
         .unmarshal().json(MinioEvent.class)

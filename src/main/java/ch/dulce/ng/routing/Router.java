@@ -39,7 +39,7 @@ public class Router extends RouteBuilder {
         .setHeader(CaffeineConstants.ACTION, constant(CaffeineConstants.ACTION_GET))
         .setHeader(CaffeineConstants.KEY, simple("${variable.savedMinioObject.serviceId}"))
         .to(ROUTING_CACHE_EP)
-        // save in chache if not found
+        // save in cache if not found
         .choice().when(header(CaffeineConstants.ACTION_HAS_RESULT).isEqualTo(Boolean.FALSE))
           .setBody().simple("select id, serviceid, transfertype, transferconfig from ng_routing where serviceid = '${variable.savedMinioObject.serviceId}'").to("jdbc:default")
           .setHeader(CaffeineConstants.ACTION, constant(CaffeineConstants.ACTION_PUT))

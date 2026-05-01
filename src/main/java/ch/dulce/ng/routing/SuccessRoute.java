@@ -37,9 +37,7 @@ public class SuccessRoute extends RouteBuilder {
     from(INTERNAL_EP)
         .setVariable("status", constant(SUCCESS_MESSAGE))
         .marshal().json()
-        .setBody()
-        .simple("INSERT INTO ng_events (tracingid, eventtime, status, event) VALUES('${variable.savedMinioObject.tracingId}', '${date-with-timezone:now:UTC:yyyy-MM-dd'T'HH:mm:ss.SSSZ}', '${variable.status}', '${body}')")
-        .to("jdbc:default");
+        .setBody().simple("INSERT INTO ng_events (tracingid, eventtime, status, event) VALUES('${variable.savedMinioObject.tracingId}', '${date-with-timezone:now:UTC:yyyy-MM-dd'T'HH:mm:ss.SSSZ}', '${variable.status}', '${body}')").to("jdbc:default");
 
   }
 
